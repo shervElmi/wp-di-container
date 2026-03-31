@@ -48,7 +48,7 @@
 		"format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
 		"lint": "phpcs --standard=phpcs.xml.dist",
 		"test": "phpunit --no-coverage",
-		"test:coverage": "phpunit --coverage-text --coverage-html=coverage"
+		"test:coverage": "XDEBUG_MODE=coverage phpunit --coverage-text --coverage-html=coverage"
 	},
 	"config": {
 		"platform": {
