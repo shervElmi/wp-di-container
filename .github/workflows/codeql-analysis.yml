@@ -38,7 +38,6 @@ jobs:
             matrix:
                 language:
                     - actions
-                    - php
 
         steps:
             - name: Checkout repository
