@@ -1,0 +1,58 @@
+name: CodeQL Analysis
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+        paths:
+            - '.github/**.yml'
+            - 'src/**'
+    schedule:
+        - cron: '27 20 * * 2'
+
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+    # The concurrency group contains the workflow name and the branch name.
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    analyze:
+        name: Static Code Analysis with CodeQL
+        runs-on: ubuntu-24.04
+        permissions:
+            actions: read
+            contents: read
+            security-events: write
+        timeout-minutes: 15
+
+        strategy:
+            fail-fast: false
+            matrix:
+                language:
+                    - actions
+                    - php
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+              with:
+                  show-progress: ${{ runner.debug == '1' && 'true' || 'false' }}
+                  persist-credentials: false
+
+            - name: Initialize CodeQL
+              uses: github/codeql-action/init@b1bff81932f5cdfc8695c7752dcee935dcd061c8 # v4.33.0
+              with:
+                  languages: ${{ matrix.language }}
+
+            - name: Perform CodeQL Analysis
+              uses: github/codeql-action/analyze@b1bff81932f5cdfc8695c7752dcee935dcd061c8 # v4.33.0
+              with:
+                  category: "/language:${{ matrix.language }}"

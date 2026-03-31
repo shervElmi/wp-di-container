@@ -1,0 +1,65 @@
+{
+	"name": "sherv/wp-di-container",
+	"description": "PSR-11 compliant dependency injection container for WordPress plugin development.",
+	"type": "library",
+	"license": "MIT",
+	"keywords": [
+		"container",
+		"dependency-injection",
+		"di",
+		"ioc",
+		"psr-11",
+		"wordpress"
+	],
+	"homepage": "https://github.com/shervElmi/wp-di-container",
+	"authors": [
+		{
+			"name": "Sherv Elmi",
+			"email": "sherv.elmi@gmail.com"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/shervElmi/wp-di-container/issues",
+		"source": "https://github.com/shervElmi/wp-di-container"
+	},
+	"require": {
+		"php": ">=8.2",
+		"psr/container": "^2.0"
+	},
+	"require-dev": {
+		"automattic/vipwpcs": "^3.0.1",
+		"brain/monkey": "^2.7",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.2.0",
+		"mockery/mockery": "^1.6.12",
+		"phpcompatibility/phpcompatibility-wp": "^2.1.8",
+		"phpunit/phpunit": "^11.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Sherv\\Container\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Sherv\\Container\\Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
+		"lint": "phpcs --standard=phpcs.xml.dist",
+		"test": "phpunit --no-coverage",
+		"test:coverage": "phpunit --coverage-text --coverage-html=coverage"
+	},
+	"config": {
+		"platform": {
+			"php": "8.2"
+		},
+		"sort-packages": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"lock": false
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true
+}

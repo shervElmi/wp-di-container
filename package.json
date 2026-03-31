@@ -1,0 +1,13 @@
+{
+	"name": "sherv-wp-di-container",
+	"private": true,
+	"description": "PSR-11 compliant dependency injection container for WordPress plugin development.",
+	"license": "MIT",
+	"scripts": {
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"husky": "^9.1.7",
+		"lint-staged": "^15.0.0"
+	}
+}
