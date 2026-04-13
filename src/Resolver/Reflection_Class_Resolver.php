@@ -3,7 +3,7 @@
  * Class Reflection_Class_Resolver.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -20,14 +20,14 @@ use Sherv\Container\Contracts\Resolver;
 /**
  * Resolves class dependencies using PHP's Reflection API.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 final readonly class Reflection_Class_Resolver implements Resolver {
 
 	/**
 	 * Create a new reflection class resolver instance.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param Container $container The container instance.
 	 */
@@ -73,7 +73,7 @@ final readonly class Reflection_Class_Resolver implements Resolver {
 	/**
 	 * Resolve all dependencies from the given array of ReflectionParameters.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param ReflectionParameter[] $dependencies The array of dependencies to resolve.
 	 * @param array                 $with         Parameters to pass during the resolving of the entry.
@@ -92,7 +92,7 @@ final readonly class Reflection_Class_Resolver implements Resolver {
 	/**
 	 * Resolve a single dependency.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param ReflectionParameter $dependency The dependency to resolve.
 	 * @return mixed The resolved dependency.
@@ -109,7 +109,7 @@ final readonly class Reflection_Class_Resolver implements Resolver {
 	/**
 	 * Resolve a class-based dependency from the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param ReflectionParameter $dependency The dependency to resolve.
 	 * @param class-string        $class_name The name of the class to resolve.
@@ -132,7 +132,7 @@ final readonly class Reflection_Class_Resolver implements Resolver {
 	/**
 	 * Resolve a non-class (primitive) dependency.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param ReflectionParameter $dependency The dependency to resolve.
 	 * @return mixed The resolved dependency value.
@@ -151,7 +151,7 @@ final readonly class Reflection_Class_Resolver implements Resolver {
 	 * Maps `self` and `parent` keywords to their actual class names.
 	 * Returns null for built-in types or untyped parameters.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param ReflectionParameter $param The reflected parameter.
 	 * @return string|null The resolved class name, or null for non-class types.

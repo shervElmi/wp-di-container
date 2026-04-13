@@ -3,7 +3,7 @@
  * Base Test_Case.
  *
  * @package Sherv\Container\Tests
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * Abstract base test case for the container test suite.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 abstract class Test_Case extends TestCase {
 
@@ -26,7 +26,7 @@ abstract class Test_Case extends TestCase {
 	/**
 	 * Set up Brain Monkey before each test.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
@@ -39,7 +39,7 @@ abstract class Test_Case extends TestCase {
 	/**
 	 * Tear down Brain Monkey after each test.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */

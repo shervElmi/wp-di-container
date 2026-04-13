@@ -3,7 +3,7 @@
  * Class Entry_Not_Found_Exception.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -16,14 +16,14 @@ use InvalidArgumentException;
 /**
  * Exception thrown when an entry is not found in the container.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 final class Entry_Not_Found_Exception extends InvalidArgumentException implements NotFoundExceptionInterface {
 
 	/**
 	 * Create a new exception for an unrecognized service identifier.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id The identifier of the entry that was not found.
 	 * @return self

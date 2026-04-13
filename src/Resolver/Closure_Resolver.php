@@ -3,7 +3,7 @@
  * Class Closure_Resolver.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -18,14 +18,14 @@ use Sherv\Container\Contracts\Resolver;
 /**
  * Resolves an entry by invoking closures with given parameters.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 final readonly class Closure_Resolver implements Resolver {
 
 	/**
 	 * Create a new closure resolver instance.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param Container $container The container instance.
 	 */

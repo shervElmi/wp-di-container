@@ -3,7 +3,7 @@
  * Class Failed_Resolution_Exception.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -17,14 +17,14 @@ use RuntimeException;
 /**
  * Exception thrown when a resolution process fails in the container.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 final class Failed_Resolution_Exception extends RuntimeException implements ContainerExceptionInterface {
 
 	/**
 	 * Create a new exception for a detected circular dependency.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id The identifier of the entry causing the circular dependency.
 	 * @return self
@@ -41,7 +41,7 @@ final class Failed_Resolution_Exception extends RuntimeException implements Cont
 	/**
 	 * Create a new exception for an entry that cannot be resolved.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param mixed $entry The entry that could not be resolved.
 	 * @return self
@@ -58,7 +58,7 @@ final class Failed_Resolution_Exception extends RuntimeException implements Cont
 	/**
 	 * Create a new exception for an entry that is not a valid closure.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param mixed $entry The entry to be resolved.
 	 * @return self
@@ -75,7 +75,7 @@ final class Failed_Resolution_Exception extends RuntimeException implements Cont
 	/**
 	 * Create a new exception for an entry that cannot be reflected.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param mixed $entry The entry that cannot be reflected.
 	 * @return self
@@ -92,7 +92,7 @@ final class Failed_Resolution_Exception extends RuntimeException implements Cont
 	/**
 	 * Create a new exception for an entry that cannot be instantiated.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $reflection_name The name of the entry that cannot be instantiated.
 	 * @return self
@@ -109,7 +109,7 @@ final class Failed_Resolution_Exception extends RuntimeException implements Cont
 	/**
 	 * Create a new exception for an unresolvable primitive.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param ReflectionParameter $dependency The dependency that could not be resolved.
 	 * @return self

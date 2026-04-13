@@ -3,7 +3,7 @@
  * Tests for the Reflection_Class_Resolver class.
  *
  * @package Sherv\Container\Tests
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );

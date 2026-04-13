@@ -3,7 +3,7 @@
  * Class Container_Factory.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -13,14 +13,14 @@ namespace Sherv\Container;
 /**
  * Static factory for a shared Container singleton.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 final class Container_Factory {
 
 	/**
 	 * The shared Container instance.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @var Container|null
 	 */
@@ -29,7 +29,7 @@ final class Container_Factory {
 	/**
 	 * Get the shared Container instance, creating it if necessary.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @return Container
 	 */
@@ -42,7 +42,7 @@ final class Container_Factory {
 	/**
 	 * Reset the factory state. Primarily useful for testing.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */

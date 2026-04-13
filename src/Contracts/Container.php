@@ -3,7 +3,7 @@
  * Interface Container.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -17,14 +17,14 @@ use Psr\Container\ContainerInterface;
 /**
  * Contract for a dependency injection container.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 interface Container extends ContainerInterface, ArrayAccess {
 
 	/**
 	 * Add a binding to the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id     The binding identifier.
 	 * @param mixed  $entry  The entry to be bound.
@@ -36,7 +36,7 @@ interface Container extends ContainerInterface, ArrayAccess {
 	/**
 	 * Add a shared binding to the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id    The binding identifier.
 	 * @param mixed  $entry The entry to be bound.
@@ -47,7 +47,7 @@ interface Container extends ContainerInterface, ArrayAccess {
 	/**
 	 * Extend an existing binding in the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string   $id      The binding identifier.
 	 * @param \Closure $closure The closure to extend the binding.
@@ -58,7 +58,7 @@ interface Container extends ContainerInterface, ArrayAccess {
 	/**
 	 * Resolve an entry from the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id   The identifier, either an entry ID or a class name.
 	 * @param array  $with Parameters to pass during the resolving of the entry.

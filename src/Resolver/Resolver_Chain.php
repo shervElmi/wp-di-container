@@ -3,7 +3,7 @@
  * Class Resolver_Chain.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -16,14 +16,14 @@ use Sherv\Container\Contracts\Resolver;
 /**
  * Chains resolvers to handle dependency resolution in sequence.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 final readonly class Resolver_Chain implements Resolver {
 
 	/**
 	 * Create a new resolver chain instance.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param Resolver[] $resolvers List of resolvers to use in the chain.
 	 */

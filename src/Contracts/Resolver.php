@@ -3,7 +3,7 @@
  * Interface Resolver.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -13,14 +13,14 @@ namespace Sherv\Container\Contracts;
 /**
  * Contract for dependency resolution.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 interface Resolver {
 
 	/**
 	 * Resolve the given entry from the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param mixed $entry The entry to be resolved.
 	 * @param array $with  Parameters to pass during the resolving of the entry.
@@ -33,7 +33,7 @@ interface Resolver {
 	/**
 	 * Check if the entry can be resolved.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param mixed $entry The entry to check.
 	 * @return bool

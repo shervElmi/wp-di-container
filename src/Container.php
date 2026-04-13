@@ -3,7 +3,7 @@
  * Class Container.
  *
  * @package Sherv\Container
- * @since   X.X.X
+ * @since   1.0.0
  */
 
 declare( strict_types=1 );
@@ -23,14 +23,14 @@ use Sherv\Container\Contracts\Resolver;
 /**
  * A dependency injection container that manages and resolves dependencies automatically.
  *
- * @since X.X.X
+ * @since 1.0.0
  */
 class Container implements ContainerContract {
 
 	/**
 	 * Bindings within the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @var array<string, array{entry: mixed, shared: bool}>
 	 */
@@ -39,7 +39,7 @@ class Container implements ContainerContract {
 	/**
 	 * Shared entries within the container.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @var array<string, mixed>
 	 */
@@ -48,7 +48,7 @@ class Container implements ContainerContract {
 	/**
 	 * Extension closures linked to container entries.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @var array<string, list<Closure>>
 	 */
@@ -57,7 +57,7 @@ class Container implements ContainerContract {
 	/**
 	 * Resolved entries.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @var array<string, bool>
 	 */
@@ -66,7 +66,7 @@ class Container implements ContainerContract {
 	/**
 	 * Entries currently being resolved.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @var string[]
 	 */
@@ -75,7 +75,7 @@ class Container implements ContainerContract {
 	/**
 	 * Create a new container instance.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param Resolver|null $resolver Optional custom resolver. Defaults to a Resolver_Chain
 	 *                                 with Reflection_Class_Resolver and Closure_Resolver.
@@ -192,7 +192,7 @@ class Container implements ContainerContract {
 	/**
 	 * Create the default resolver chain.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @return Resolver
 	 */
@@ -208,7 +208,7 @@ class Container implements ContainerContract {
 	/**
 	 * Check if the given binding has been resolved.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id The binding identifier.
 	 * @return bool
@@ -220,7 +220,7 @@ class Container implements ContainerContract {
 	/**
 	 * Check if an entry is shared.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id The binding identifier.
 	 * @return bool
@@ -232,7 +232,7 @@ class Container implements ContainerContract {
 	/**
 	 * Get extender callbacks for a specific entry ID.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id The binding identifier.
 	 * @return array The extender callbacks.
@@ -253,7 +253,7 @@ class Container implements ContainerContract {
 	/**
 	 * Remove all of the extender callbacks for a given entry ID.
 	 *
-	 * @since X.X.X
+	 * @since 1.0.0
 	 *
 	 * @param string $id The binding identifier.
 	 * @return void
