@@ -71,7 +71,7 @@ jobs:
                     echo "No X.X.X placeholders found. Skipping replacement."
                     exit 0
                   fi
-                  sed -i "s/@since\(\s\+\)X\.X\.X/@since\1${VERSION}/g" $(find src/ tests/ -name '*.php')
+                  find src/ tests/ -name '*.php' -exec sed -i "s/@since\(\s\+\)X\.X\.X/@since\1${VERSION}/g" {} +
                   echo "Replaced ${BEFORE} placeholder(s) with ${VERSION}."
 
             - name: Verify no placeholders remain
